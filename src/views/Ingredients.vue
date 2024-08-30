@@ -10,12 +10,8 @@
       placeholder="Search for Ingredients"
     />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-      <a href="#"
-        @click.prevent="openIngredient(ingredient)"
-        v-for="ingredient of computedIngredients"
-        :key="ingredient.idIngredient"
-        class="block bg-white rounded p-3 mb-3 shadow"
-      >
+      <a href="#" @click.prevent="openIngredient(ingredient)" v-for="ingredient of computedIngredients"
+        :key="ingredient.idIngredient" class="block bg-white rounded p-3 mb-3 shadow">
         <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
       </a>
     </div>
@@ -32,6 +28,7 @@ import store from "../store";
 const router = useRouter();
 const keyword = ref("");
 const ingredients = ref([]);
+
 const computedIngredients = computed(() => {
   if (!computedIngredients) return ingredients;
   return ingredients.value.filter((i) =>
@@ -52,4 +49,5 @@ onMounted(() => {
     ingredients.value = data.meals;
   });
 });
+
 </script>

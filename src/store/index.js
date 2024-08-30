@@ -1,17 +1,4 @@
 import { createStore } from "vuex";
-// import state from "./state"
-// import * as actions from "./actions"
-// import * as mutations from "./mutations"
-
-// const store = createStore([
-//     state,
-//     actions,
-//     mutations,
-// ])
-
-// export default store;
-
-import axios from "axios";
 import axiosClient from '../axiosClient';
 
 export default createStore({
