@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This project is a meal searching application built with Vue.js. 
+This project is a meal searching application built with Vue.js. It interacts with the MealDB API using Axios to fetch and display data.
 
-The application allows users to:
+Key features include:
 - Display random meals
 - Search for meals by name
 - Browse meals by letter
